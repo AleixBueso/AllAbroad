@@ -34,6 +34,6 @@ public class FloatingScript : MonoBehaviour {
                 closestVertexIndex = i;
         }
 
-        transform.localPosition = new Vector3(transform.localPosition.x, planeCloth.vertices[closestVertexIndex].y / 10, transform.localPosition.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, planeCloth.vertices[closestVertexIndex].y, transform.localPosition.z);
     }
 }
