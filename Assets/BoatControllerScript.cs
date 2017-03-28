@@ -12,13 +12,18 @@ public class BoatControllerScript : MonoBehaviour {
     public float Acceleration = 5f;    //How fast will object reach a maximum speed
     public float Deceleration = 0.5f;    //How fast will object reach a speed of 0
 
+    private ParticleSystem smokeEmitter;
+
     // Use this for initialization
     void Start () {
-		
-	}
+        smokeEmitter = GameObject.Find("BoatSmoke").GetComponent<ParticleSystem>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
+
+        smokeEmitter.;
+
         if (Input.GetKey(KeyCode.A))
             gameObject.transform.Rotate( - Vector3.up * turnSpeed);
 
@@ -31,6 +36,8 @@ public class BoatControllerScript : MonoBehaviour {
                 Speed = Speed + Acceleration * Time.deltaTime;
             else
                 Speed = MaxSpeed;
+
+            smokeEmitter.Play();
         }
 
         else
