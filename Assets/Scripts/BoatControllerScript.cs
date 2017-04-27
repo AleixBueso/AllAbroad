@@ -13,6 +13,7 @@ public class BoatControllerScript : MonoBehaviour {
     public float Deceleration = 0.5f;    //How fast will object reach a speed of 0
 
     public ParticleSystem[] smokeEmitter;
+    public GameObject RightCannon;
 
     // Use this for initialization
     void Start () {
@@ -23,6 +24,9 @@ public class BoatControllerScript : MonoBehaviour {
 
         for(uint i = 0; i < smokeEmitter.Length; i++)
             smokeEmitter[i].enableEmission = false;
+
+        if (Input.GetKey(KeyCode.Q))
+
 
         if (Input.GetKey(KeyCode.A))
             gameObject.transform.Rotate( - Vector3.up * turnSpeed);

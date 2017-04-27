@@ -97,6 +97,7 @@
     <Compile Include="Assets\Scripts\WaveControllerScript.cs" />
     <Compile Include="Assets\Scripts\WaveTypeScript.cs" />
     <Compile Include="Assets\Scripts\textureScrollScript.cs" />
+    <Compile Include="Assets\ShootCannon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
