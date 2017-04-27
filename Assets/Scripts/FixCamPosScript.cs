@@ -5,15 +5,19 @@ using UnityEngine;
 public class FixCamPosScript : MonoBehaviour {
 
     public float Ypos = 6f;
-    private GameObject boat;
+    public GameObject boat;
+    private Vector3 original_pos;
 
 	// Use this for initialization
 	void Start () {
-        boat = GameObject.Find("BoatController");
-	}
+        original_pos = transform.position;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.transform.position.Set(5, Ypos,9);
+
+        gameObject.transform.position = new Vector3(boat.transform.position.x + original_pos.x, Ypos + original_pos.y , boat.transform.position.z + original_pos.z);
+
 	}
 }
