@@ -13,7 +13,10 @@ public class BoatControllerScript : MonoBehaviour {
     public float Deceleration = 0.5f;    //How fast will object reach a speed of 0
 
     public ParticleSystem[] smokeEmitter;
+    public ParticleSystem[] cannonEmitters;
+    public GameObject LeftCannon;
     public GameObject RightCannon;
+    public GameObject Engine;
 
     // Use this for initialization
     void Start () {
@@ -25,8 +28,19 @@ public class BoatControllerScript : MonoBehaviour {
         for(uint i = 0; i < smokeEmitter.Length; i++)
             smokeEmitter[i].enableEmission = false;
 
-        if (Input.GetKey(KeyCode.Q))
+        Engine.GetComponent<Animator>().SetBool("Working", false);
 
+        if (Input.GetKey(KeyCode.Q))
+        {
+            LeftCannon.GetComponent<Animator>().SetTrigger("Shoot");
+            cannonEmitters[1].Play();
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            RightCannon.GetComponent<Animator>().SetTrigger("Shoot");
+            cannonEmitters[0].Play();
+        }
 
         if (Input.GetKey(KeyCode.A))
             gameObject.transform.Rotate( - Vector3.up * turnSpeed);
@@ -43,6 +57,9 @@ public class BoatControllerScript : MonoBehaviour {
 
             for (uint i = 0; i < smokeEmitter.Length; i++)
                 smokeEmitter[i].enableEmission = true;
+
+            Engine.GetComponent<Animator>().SetBool("Working", true);
+
         }
 
         else

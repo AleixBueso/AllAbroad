@@ -1,55 +1,17 @@
 fileFormatVersion: 2
-guid: 0e0b244a1d1dd6745a17141bd8541b14
-timeCreated: 1493333675
+guid: 7fa7dd296764a954ea1e313f307ba235
+timeCreated: 1493324484
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: joint1
-    100004: joint2
-    100006: joint3
-    100008: joint4
-    100010: joint5
-    100012: polySurface77
-    100014: polySurface68
-    100016: polySurface73
-    100018: polySurface73 1
-    100020: polySurface74
-    100022: polySurface75
-    100024: polySurface76
-    100026: polySurface80
-    100028: transform89
-    100030: transform90
-    100032: transform91
-    100034: transform92
-    100036: transform93
     400000: //RootNode
-    400002: joint1
-    400004: joint2
-    400006: joint3
-    400008: joint4
-    400010: joint5
-    400012: polySurface77
-    400014: polySurface68
-    400016: polySurface73
-    400018: polySurface73 1
-    400020: polySurface74
-    400022: polySurface75
-    400024: polySurface76
-    400026: polySurface80
-    400028: transform89
-    400030: transform90
-    400032: transform91
-    400034: transform92
-    400036: transform93
-    2300000: polySurface77
-    3300000: polySurface77
-    4300000: polySurface77
-    4300002: polySurface80
-    7400000: Shoot
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface50
+    7400000: Working
     9500000: //RootNode
-    13700000: polySurface80
   materials:
     importMaterials: 1
     materialName: 0
@@ -72,18 +34,18 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Shoot
+      name: Working
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 55
+      lastFrame: 70
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
+      loopTime: 1
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -97,42 +59,6 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: joint1
-        weight: 1
-      - path: joint1/joint2
-        weight: 1
-      - path: joint1/joint2/joint3
-        weight: 1
-      - path: joint1/joint2/joint3/joint4
-        weight: 1
-      - path: joint1/joint2/joint3/joint4/joint5
-        weight: 1
-      - path: polySurface68
-        weight: 1
-      - path: polySurface68/polySurface73 1
-        weight: 1
-      - path: polySurface68/polySurface73 1/transform92
-        weight: 1
-      - path: polySurface68/polySurface74
-        weight: 1
-      - path: polySurface68/polySurface74/transform91
-        weight: 1
-      - path: polySurface68/polySurface75
-        weight: 1
-      - path: polySurface68/polySurface75/transform90
-        weight: 1
-      - path: polySurface68/polySurface76
-        weight: 1
-      - path: polySurface68/polySurface76/transform89
-        weight: 1
-      - path: polySurface73
-        weight: 1
-      - path: polySurface73/polySurface80
-        weight: 1
-      - path: polySurface73/transform93
-        weight: 1
-      - path: polySurface77
         weight: 1
       maskType: 3
       maskSource: {instanceID: 0}
