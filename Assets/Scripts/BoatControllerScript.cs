@@ -38,7 +38,7 @@ public class BoatControllerScript : MonoBehaviour {
         {
             LeftCannon.GetComponent<Animator>().SetBool("Shoot", true);
             cannonEmitters[1].Play();
-            Instantiate(CannonBall, LeftCannon.transform);
+            Instantiate(CannonBall, LeftCannon.transform.parent.transform);
 
         }
 
@@ -46,6 +46,7 @@ public class BoatControllerScript : MonoBehaviour {
         {
             RightCannon.GetComponent<Animator>().SetBool("Shoot", true);
             cannonEmitters[0].Play();
+            Instantiate(CannonBall, RightCannon.transform.parent.transform);
         }
 
         if (Input.GetKey(KeyCode.A))
