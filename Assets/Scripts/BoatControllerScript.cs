@@ -36,17 +36,32 @@ public class BoatControllerScript : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Q))
         {
-            LeftCannon.GetComponent<Animator>().SetBool("Shoot", true);
-            cannonEmitters[1].Play();
-            Instantiate(CannonBall, LeftCannon.transform.parent.transform);
-
+            if (LeftCannon.GetComponent<CannonValuesScript>().is_charged)
+            {
+                LeftCannon.GetComponent<Animator>().SetBool("Shoot", true);
+                cannonEmitters[1].Play();
+                GameObject Clone = (GameObject)Instantiate(CannonBall, LeftCannon.transform.parent.transform.position, LeftCannon.transform.parent.transform.rotation);
+                Clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 8, -20));
+                LeftCannon.GetComponent<CannonValuesScript>().is_charged = false;
+            }
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            RightCannon.GetComponent<Animator>().SetBool("Shoot", true);
-            cannonEmitters[0].Play();
-            Instantiate(CannonBall, RightCannon.transform.parent.transform);
+            if (RightCannon.GetComponent<CannonValuesScript>().is_charged)
+            {
+                RightCannon.GetComponent<Animator>().SetBool("Shoot", true);
+                cannonEmitters[0].Play();
+                GameObject Clone = (GameObject)Instantiate(CannonBall, RightCannon.transform.parent.transform.position, RightCannon.transform.parent.transform.rotation);
+                Clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 8, 20));
+                RightCannon.GetComponent<CannonValuesScript>().is_charged = false;
+            }
+        }
+
+        if(Input.GetKey(KeyCode.R))
+        {
+            RightCannon.GetComponent<CannonValuesScript>().is_charged = true;
+            LeftCannon.GetComponent<CannonValuesScript>().is_charged = true;
         }
 
         if (Input.GetKey(KeyCode.A))
