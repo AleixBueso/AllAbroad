@@ -46,15 +46,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BoatControllerScript.cs" />
-     <Compile Include="Assets\FixCamPosScript.cs" />
-     <Compile Include="Assets\FloatingScript.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
-     <Compile Include="Assets\WaveControllerScript.cs" />
-     <Compile Include="Assets\textureScrollScript.cs" />
+     <Compile Include="Assets\Chibi Mummy\Scripts\anims_controls.cs" />
+     <Compile Include="Assets\Chibi Mummy\Scripts\control_script.cs" />
+     <Compile Include="Assets\Scripts\BoatControllerScript.cs" />
+     <Compile Include="Assets\Scripts\BoatPhysicsScript.cs" />
+     <Compile Include="Assets\Scripts\EndlessWaterSquareScript.cs" />
+     <Compile Include="Assets\Scripts\FixCamPosScript.cs" />
+     <Compile Include="Assets\Scripts\FloatingScript.cs" />
+     <Compile Include="Assets\Scripts\LowPolyShader.cs" />
+     <Compile Include="Assets\Scripts\ModifyBoatMeshScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\TriangleDataScript.cs" />
+     <Compile Include="Assets\Scripts\WaterControllerScript.cs" />
+     <Compile Include="Assets\Scripts\WaterSquareScript.cs" />
+     <Compile Include="Assets\Scripts\WaveControllerScript.cs" />
+     <Compile Include="Assets\Scripts\WaveTypeScript.cs" />
+     <Compile Include="Assets\Scripts\textureScrollScript.cs" />
+     <Compile Include="Assets\ShootCannon.cs" />
+     <None Include="Assets\Shaders\LowPolyShader.shader" />
+     <None Include="Assets\Shaders\LowPolyShader 2.shader" />
      <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
      <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Chibi Mummy\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

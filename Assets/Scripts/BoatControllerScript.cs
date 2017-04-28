@@ -17,6 +17,7 @@ public class BoatControllerScript : MonoBehaviour {
     public GameObject LeftCannon;
     public GameObject RightCannon;
     public GameObject Engine;
+    public Object CannonBall;
 
     // Use this for initialization
     void Start () {
@@ -30,15 +31,20 @@ public class BoatControllerScript : MonoBehaviour {
 
         Engine.GetComponent<Animator>().SetBool("Working", false);
 
+        LeftCannon.GetComponent<Animator>().SetBool("Shoot", false);
+        RightCannon.GetComponent<Animator>().SetBool("Shoot", false);
+
         if (Input.GetKey(KeyCode.Q))
         {
-            LeftCannon.GetComponent<Animator>().SetTrigger("Shoot");
+            LeftCannon.GetComponent<Animator>().SetBool("Shoot", true);
             cannonEmitters[1].Play();
+            Instantiate(CannonBall, LeftCannon.transform);
+
         }
 
         if (Input.GetKey(KeyCode.E))
         {
-            RightCannon.GetComponent<Animator>().SetTrigger("Shoot");
+            RightCannon.GetComponent<Animator>().SetBool("Shoot", true);
             cannonEmitters[0].Play();
         }
 
