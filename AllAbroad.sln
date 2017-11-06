@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAbroad.Plugins", "AllAbroad.Plugins.csproj", "{0F2CAB62-2E5C-630D-53AD-A0994D01E217}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAbroad", "AllAbroad.csproj", "{FB7210AB-9442-C2B5-C018-0BAD6580186F}"

@@ -1,11 +1,11 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace BoatTutorial
 {
     //Generates the mesh that's below the water
-    public class ModifyBoatMeshScript
+    public class ModifyBoatMesh
     {
         //The boat transform needed to get the global position of a vertice
         private Transform boatTrans;
@@ -20,9 +20,9 @@ namespace BoatTutorial
         float[] allDistancesToWater;
 
         //The triangles belonging to the part of the boat that's under water
-        public List<TriangleDataScript> underWaterTriangleData = new List<TriangleDataScript>();
+        public List<TriangleData> underWaterTriangleData = new List<TriangleData>();
 
-        public ModifyBoatMeshScript(GameObject boatObj)
+        public ModifyBoatMesh(GameObject boatObj)
         {
             //Get the transform
             boatTrans = boatObj.transform;
@@ -53,7 +53,7 @@ namespace BoatTutorial
                 //And if we want to debug we can convert it back to local
                 boatVerticesGlobal[j] = globalPos;
 
-                allDistancesToWater[j] = WaterControllerScript.current.DistanceToWater(globalPos, Time.time);
+                allDistancesToWater[j] = WaterController.current.DistanceToWater(globalPos, Time.time);
             }
 
             //Add the triangles that are below the water
@@ -107,7 +107,7 @@ namespace BoatTutorial
                     Vector3 p3 = vertexData[2].globalVertexPos;
 
                     //Save the triangle
-                    underWaterTriangleData.Add(new TriangleDataScript(p1, p2, p3));
+                    underWaterTriangleData.Add(new TriangleData(p1, p2, p3));
                 }
                 //1 or 2 vertices are below the water
                 else
@@ -199,8 +199,8 @@ namespace BoatTutorial
 
             //Save the data, such as normal, area, etc      
             //2 triangles below the water  
-            underWaterTriangleData.Add(new TriangleDataScript(M, I_M, I_L));
-            underWaterTriangleData.Add(new TriangleDataScript(M, I_L, L));
+            underWaterTriangleData.Add(new TriangleData(M, I_M, I_L));
+            underWaterTriangleData.Add(new TriangleData(M, I_L, L));
         }
 
         //Build the new triangles where two of the old vertices are above the water
@@ -270,7 +270,7 @@ namespace BoatTutorial
 
             //Save the data, such as normal, area, etc
             //1 triangle below the water
-            underWaterTriangleData.Add(new TriangleDataScript(L, J_H, J_M));
+            underWaterTriangleData.Add(new TriangleData(L, J_H, J_M));
         }
 
         //Help class to store triangle data so we can sort the distances
@@ -285,7 +285,7 @@ namespace BoatTutorial
         }
 
         //Display the underwater mesh
-        public void DisplayMesh(Mesh mesh, string name, List<TriangleDataScript> triangesData)
+        public void DisplayMesh(Mesh mesh, string name, List<TriangleData> triangesData)
         {
             List<Vector3> vertices = new List<Vector3>();
             List<int> triangles = new List<int>();
