@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ACABC72D-6A6C-5150-080B-2EA8B26BB816}</ProjectGuid>
+    <ProjectGuid>{3C4098C0-7A74-773B-2252-C52243E5D343}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -49,6 +49,8 @@
      <Compile Include="Assets\Chibi Mummy\Scripts\anims_controls.cs" />
      <Compile Include="Assets\Chibi Mummy\Scripts\control_script.cs" />
      <Compile Include="Assets\Scripts\BoatController.cs" />
+     <Compile Include="Assets\Scripts\BoatControllerTest.cs" />
+     <Compile Include="Assets\Scripts\BoatEngine.cs" />
      <Compile Include="Assets\Scripts\BoatPhysics.cs" />
      <Compile Include="Assets\Scripts\BoatPhysicsMath.cs" />
      <Compile Include="Assets\Scripts\CannonBallScript.cs" />
@@ -101,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{88A0384C-B877-34CA-FCA7-53703E7D29E3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{2B23CF52-C90D-1762-37CD-04AEEE2DC8CC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

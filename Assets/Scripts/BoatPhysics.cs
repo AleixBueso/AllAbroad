@@ -104,13 +104,14 @@ public class BoatPhysics : MonoBehaviour
 			Vector3 forceToAdd = Vector3.zero;
 
 			//Force 1 - The hydrostatic force (buoyancy)
-			forceToAdd += BoatPhysicsMath.BuoyancyForce(rhoWater, triangleData);
+			//forceToAdd += BoatPhysicsMath.BuoyancyForce(rhoWater, triangleData);
 
 			//Force 2 - Viscous Water Resistance
-			forceToAdd += BoatPhysicsMath.ViscousWaterResistanceForce(rhoWater, triangleData, Cf);
+			//forceToAdd += BoatPhysicsMath.ViscousWaterResistanceForce(rhoWater, triangleData, Cf);
 
 			//Force 3 - Pressure drag
-			forceToAdd += BoatPhysicsMath.PressureDragForce(triangleData);
+			//
+			//forceToAdd += BoatPhysicsMath.PressureDragForce(triangleData);
 
 			//Force 4 - Slamming force
 			//Which of the original triangles is this triangle a part of
@@ -128,13 +129,13 @@ public class BoatPhysics : MonoBehaviour
 			//Debug
 
 			//Normal
-			//Debug.DrawRay(triangleData.center, triangleData.normal * 3f, Color.white);
+			Debug.DrawRay(triangleData.center, triangleData.normal * 3f, Color.white);
 
 			//Buoyancy
-			//Debug.DrawRay(triangleData.center, BoatPhysicsMath.BuoyancyForce(rhoWater, triangleData).normalized * -3f, Color.blue);
+			Debug.DrawRay(triangleData.center, BoatPhysicsMath.BuoyancyForce(rhoWater, triangleData).normalized * -3f, Color.blue);
 
 			//Velocity
-			//Debug.DrawRay(triangleCenter, triangleVelocityDir * 3f, Color.black);
+			Debug.DrawRay(triangleData.center, triangleData.velocityDir * 3f, Color.black);
 
 			//Viscous Water Resistance
 			//Debug.DrawRay(triangleCenter, viscousWaterResistanceForce.normalized * 3f, Color.black);

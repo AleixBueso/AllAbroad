@@ -24,7 +24,7 @@ public class WaveTypes
         //x + y + z rolling waves
         //x * z produces a moving sea without rolling waves
 
-        float waveType = z;
+		float waveType = x * z;
 
         y += Mathf.Sin((timeSinceStart * speed + waveType) / waveDistance) * scale;
 

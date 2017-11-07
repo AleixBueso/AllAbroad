@@ -25,14 +25,14 @@ public class WaterController : MonoBehaviour
     //Get the y coordinate from whatever wavetype we are using
     public float GetWaveYPos(Vector3 position, float timeSinceStart)
     {
-        //if (isMoving)
-        //{
-        //return WaveTypes.SinXWave(position, speed, scale, waveDistance, noiseStrength, noiseWalk, timeSinceStart);
-        //}
-        //else
-        //{
-        //return 0f;
-        //}
+        if (isMoving)
+        {
+        return WaveTypes.SinXWave(position, speed, scale, waveDistance, noiseStrength, noiseWalk, timeSinceStart);
+        }
+        else
+        {
+        return 0f;
+        }
 
         return 0f;
     }
