@@ -1,8 +1,16 @@
-﻿<Properties StartupItem="AllAbroad.Plugins.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SplashScript.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BoatPhysicsMath.cs">
     <Files>
-      <File FileName="Assets\SplashScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BoatPhysics.cs" Line="16" Column="24" />
+      <File FileName="Assets\Scripts\ModifyBoatMesh.cs" Line="6" Column="28" />
+      <File FileName="Assets\Scripts\EndlessWaterSquare.cs" Line="194" Column="1" />
+      <File FileName="Assets\Scripts\WaveType.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WaterSquare.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BoatPhysicsMath.cs" Line="203" Column="36" />
+      <File FileName="Assets\Scripts\DebugPhysics.cs" Line="34" Column="2" />
+      <File FileName="Assets\Scripts\SlammingForceData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TriangleData.cs" Line="3" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
