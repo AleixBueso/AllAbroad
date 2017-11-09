@@ -16,6 +16,9 @@ public class SimlpeMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey (KeyCode.W))
+			BoatRB.AddForce (new Vector3 (0, 0, MotorForce));
+
+		else if (Input.GetKey (KeyCode.S))
 			BoatRB.AddForce (new Vector3 (0, 0, -MotorForce));
 	}
 }
