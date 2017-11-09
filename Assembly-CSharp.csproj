@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3C4098C0-7A74-773B-2252-C52243E5D343}</ProjectGuid>
+    <ProjectGuid>{ACABC72D-6A6C-5150-080B-2EA8B26BB816}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\ModifyBoatMesh.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\ShootCannon.cs" />
+     <Compile Include="Assets\Scripts\SimlpeMotor.cs" />
      <Compile Include="Assets\Scripts\SlammingForceData.cs" />
      <Compile Include="Assets\Scripts\SplashScript.cs" />
      <Compile Include="Assets\Scripts\TriangleData.cs" />
@@ -73,11 +74,21 @@
      <Compile Include="Assets\Scripts\WaveController.cs" />
      <Compile Include="Assets\Scripts\WaveType.cs" />
      <Compile Include="Assets\Scripts\textureScrollScript.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\Collections\MinHeap.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\FloatingObject.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\Utils\ColliderUtils.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\Utils\DebugUtils.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\Utils\MathfUtils.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\Utils\StringUtils.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\WaterFX.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\WaterVolume.cs" />
+     <Compile Include="Assets\Water\Water Buoyancy\Scripts\WaterWaves.cs" />
      <None Include="Assets\Shaders\LowPolyShader.shader" />
      <None Include="Assets\Shaders\LowPolyShader 2.shader" />
      <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
      <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Water\Water Buoyancy\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Chibi Mummy\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -103,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2B23CF52-C90D-1762-37CD-04AEEE2DC8CC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{88A0384C-B877-34CA-FCA7-53703E7D29E3}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

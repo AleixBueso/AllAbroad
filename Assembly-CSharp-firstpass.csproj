@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2B23CF52-C90D-1762-37CD-04AEEE2DC8CC}</ProjectGuid>
+    <ProjectGuid>{88A0384C-B877-34CA-FCA7-53703E7D29E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -55,6 +55,7 @@
      <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
      <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Water\Water Buoyancy\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Chibi Mummy\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
