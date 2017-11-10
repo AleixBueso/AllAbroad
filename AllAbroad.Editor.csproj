@@ -128,6 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\NoSharedVertices.cs" />
+    <Compile Include="Assets\Water\Water Buoyancy\Scripts\Editor\WaterMeshGenerator.cs" />
+    <Compile Include="Assets\Water\Water Buoyancy\Scripts\Editor\WaterVolumeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
@@ -136,6 +138,7 @@
     <None Include="Assets\Shaders\LowPolyShader 2.shader" />
     <None Include="Assets\Shaders\LowPolyShader.shader" />
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+    <None Include="Assets\Water\Water Buoyancy\Shaders\FXWaterPro.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

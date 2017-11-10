@@ -7,6 +7,7 @@ public class SimlpeMotor : MonoBehaviour {
 	private Rigidbody BoatRB;
 
 	public float MotorForce = 100f;
+    public float MotorTorque = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +16,16 @@ public class SimlpeMotor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.W))
-			BoatRB.AddForce (new Vector3 (0, 0, MotorForce));
+        if (Input.GetKey(KeyCode.W))
+            BoatRB.AddForce(transform.forward * MotorForce);
 
-		else if (Input.GetKey (KeyCode.S))
-			BoatRB.AddForce (new Vector3 (0, 0, -MotorForce));
-	}
+        if (Input.GetKey(KeyCode.S))
+            BoatRB.AddForce( - transform.forward * MotorForce);
+
+        if (Input.GetKey(KeyCode.A))
+            BoatRB.AddTorque(-transform.up * MotorTorque);
+
+        if (Input.GetKey(KeyCode.D))
+            BoatRB.AddTorque(transform.up * MotorTorque);
+    }
 }

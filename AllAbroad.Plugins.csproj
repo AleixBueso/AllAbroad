@@ -90,6 +90,7 @@
     <None Include="Assets\Shaders\LowPolyShader 2.shader" />
     <None Include="Assets\Shaders\LowPolyShader.shader" />
     <None Include="Assets\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
+    <None Include="Assets\Water\Water Buoyancy\Shaders\FXWaterPro.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

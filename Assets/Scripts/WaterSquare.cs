@@ -64,44 +64,7 @@ public class WaterSquare
         //Save the vertices so we can update them in a thread
         this.vertices = terrainMeshFilter.mesh.vertices;
     }
-
-    //If we are updating the square from outside of a thread 
-    public void MoveSea(Vector3 oceanPos, float timeSinceStart)
-    {
-        Vector3[] vertices = terrainMeshFilter.mesh.vertices;
-
-        for (int i = 0; i < vertices.Length; i++)
-        {
-            Vector3 vertex = vertices[i];
-
-            //From local to global
-            //Vector3 vertexGlobal = squareTransform.TransformPoint(vertex);
-
-            Vector3 vertexGlobal = vertex + centerPos + oceanPos;
-
-            //Unnecessary because no rotation nor scale
-            //Vector3 vertexGlobalTest2 = squareTransform.rotation * Vector3.Scale(vertex, squareTransform.localScale) + squareTransform.position;
-
-            //Debug 
-            if (i == 0)
-            {
-                //Debug.Log(vertexGlobal + " " + vertexGlobalTest);
-            }
-
-            //Get the water height at this coordinate
-            vertex.y = WaterController.current.GetWaveYPos(vertexGlobal, timeSinceStart);
-
-            //From global to local - not needed if we use the saved local x,z position
-            //vertices[i] = transform.InverseTransformPoint(vertex);
-
-            //Don't need to go from global to local because the y pos is always at 0
-            vertices[i] = vertex;
-        }
-
-        terrainMeshFilter.mesh.vertices = vertices;
-
-        terrainMeshFilter.mesh.RecalculateNormals();
-    }
+  
 
     //Generate the water mesh
     public void GenerateMesh()
